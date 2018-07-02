@@ -24,7 +24,11 @@ def setcookie():
 @app.route('/getcookie')
 def getcookie():
    name = request.cookies.get('userID')
-   return '<h1>'+name+', your final grade is </h1>'
+   p1g = request.cookies.get('p1g')
+   p2g = request.cookies.get('p2g')
+   exg = request.cookies.get('exg')
+   finalg = str((float(p1g)+float(p2g)+float(exg))/3)
+   return '<h1>'+name+', your final grade is '+finalg+'</h1>'
 
 if __name__ == '__main__':
    app.run(debug = True)

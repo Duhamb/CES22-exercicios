@@ -1,0 +1,8 @@
+SINGLE RESPONSABILITY:
+
+O projeto precisava de um aplicativo que verificasse qual o estado atual da rede (qual provedor estava sendo utilizado). Para isso, foi criado uma classe exclusiva (ServerStatus) cuja responsabilidade era estritamente fazer essa verificação.
+
+LISKOV SUBSTITUTION:
+
+Toda vez que foi utilizado um form, foi tido um model como referência.
+Dessa forma, o forms funciona como se fosse uma subclasse do model. Apesar de nem sempre o forms ter explicitamente todos os fields que o model tem, o field existe, não reduzindo as funcionalidades da classe model.
